@@ -35,7 +35,7 @@ jobs:
       run: dotnet publish -o deploy
 
     - name: Empacotar conteúdo da pasta
-      run: zip -r deploy.zip ./deploy
+      run: cd deploy && zip -r ../deploy.zip ./*
 
     - name: Fazer upload do artefato
       uses: actions/upload-artifact@v2
