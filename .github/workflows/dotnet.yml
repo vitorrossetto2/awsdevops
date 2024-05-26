@@ -37,8 +37,14 @@ jobs:
     - name: Empacotar conteúdo da pasta
       run: cd deploy && zip -r ../deploy.zip ./*
 
-    - name: Fazer upload do artefato
-      uses: actions/upload-artifact@v2
+    - name:  Deploy to EB
+      uses:  einaregilsson/beanstalk-deploy@v22
       with:
-        name: deploy
-        path: deploy.zip
+        aws_access_key:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name:  .Net Core Devops
+        environment_name:  NetCoreDevops-env
+        version_label:  ${{ github.workflow }}-${{ github.run_id }}
+        region:  us-east-2
+        deployment_package:  deploy.zip
+
