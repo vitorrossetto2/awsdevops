@@ -36,3 +36,5 @@ artifacts/
 # Visual Studio Code
 .vscode/
 *.jfm
+
+deploy/
