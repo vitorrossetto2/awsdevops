@@ -1,0 +1,38 @@
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test Results
+[TestResults]/
+
+# .NET Core Ignores
+*.user
+*.usage
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Ignores
+**/[Dd]ebug/**
+**/[Rr]elease/**
+**/[Oo]bj/**
+**/[Bb]in/**
+*.nuget.props
+*.user
+*.suo
+*.user
+*.cache
+*.docstates
+*.vspscc
+
+# Miscellaneous files
+*.pidb
+*.svclog
+*.scc
+
+# Azure DevOps
+.azure/
+
+# Visual Studio Code
+.vscode/
+*.jfm
